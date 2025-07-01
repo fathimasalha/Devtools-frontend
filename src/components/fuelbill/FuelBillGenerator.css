@@ -1,0 +1,46 @@
+/* FuelBillGenerator.css */
+
+.input.input-bordered {
+  @apply border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400;
+  color: #111;
+  background-color: #fff;
+}
+
+.btn-template.active {
+  @apply bg-green-600 text-white border-green-600;
+}
+
+.fuel-bill-generator-container {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.bill-receipt {
+  border: 2px dashed #bbb;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-family: 'Roboto Mono', 'Courier New', monospace;
+  box-shadow: 0 2px 8px 0 #e5e7eb;
+  color: #222;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .bill-receipt, .bill-receipt * {
+    visibility: visible;
+  }
+  .bill-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    box-shadow: none;
+  }
+}
+
+label {
+  color: #222;
+  font-weight: 500;
+} 

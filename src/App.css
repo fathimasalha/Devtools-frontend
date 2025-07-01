@@ -1,0 +1,36 @@
+.homepage-bg {
+  position: absolute;
+  width: 24rem;
+  height: 24rem;
+  left: 10%;
+  top: 20%;
+  background: linear-gradient(to right, #3b82f6 0%, #a21caf 100%);
+  border-radius: 9999px;
+  filter: blur(48px);
+  opacity: 0.18;
+  z-index: 0;
+}
+.homepage-bg2 {
+  position: absolute;
+  width: 16rem;
+  height: 16rem;
+  right: 10%;
+  bottom: 20%;
+  background: linear-gradient(to right, #a21caf 0%, #ec4899 100%);
+  border-radius: 9999px;
+  filter: blur(48px);
+  opacity: 0.18;
+  z-index: 0;
+}
+.premium-badge {
+  z-index: 20;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .premium-badge {
+    font-size: 0.55rem !important;
+    padding: 0.3rem 0.8rem !important;
+    margin-top: 5rem;
+  }
+} 

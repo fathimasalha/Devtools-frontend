@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.font-inter {
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadein {
+  animation: fadein 0.7s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+@keyframes fadein-slow {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadein-slow {
+  animation: fadein-slow 1.2s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+@keyframes stat-bounce {
+  0% { transform: translateY(0) scale(1); box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10); }
+  30% { transform: translateY(-8px) scale(1.06); box-shadow: 0 8px 24px 0 rgba(102,126,234,0.18); }
+  50% { transform: translateY(0) scale(1.03); box-shadow: 0 4px 16px 0 rgba(102,126,234,0.12); }
+  70% { transform: translateY(-4px) scale(1.04); box-shadow: 0 6px 20px 0 rgba(102,126,234,0.15); }
+  100% { transform: translateY(0) scale(1); box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10); }
+}
+
+.stat-bounce-hover {
+  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+.stat-bounce-hover:hover, .stat-bounce-hover:focus {
+  animation: stat-bounce 0.7s cubic-bezier(0.4,0,0.2,1);
+  outline: none;
+  box-shadow: 0 0 0 4px #6366f1aa, 0 8px 32px 0 rgba(102,126,234,0.18);
+  z-index: 2;
+}
+
+@keyframes fadein-up {
+  from { opacity: 0; transform: translateY(40px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-fadein-up {
+  animation: fadein-up 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+@keyframes icon-pulse {
+  0%, 100% { filter: drop-shadow(0 0 0 #6366f1); }
+  50% { filter: drop-shadow(0 0 8px #6366f1); }
+}
+
+.icon-pulse:hover, .icon-pulse:focus {
+  animation: icon-pulse 1s infinite;
+}
+
+/* Minimalist tweaks for WordlyCount */
+.wordlycount-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #18181b 0%, #000 100%);
+  padding: 2rem 0.5rem;
+}
+
+.wordlycount-card {
+  width: 100%;
+  max-width: 700px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.wordlycount-textarea {
+  width: 100%;
+  min-height: 120px;
+  max-height: 400px;
+  resize: none;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10) inset;
+  transition: border 0.2s;
+}
+.wordlycount-textarea:focus {
+  border-color: #60a5fa;
+}
+
+.wordlycount-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .wordlycount-stats {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.wordlycount-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 640px) {
+  .wordlycount-stat-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.wordlycount-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0,0,0,0.4);
+  border-radius: 0.7rem;
+  padding: 0.8rem;
+  min-width: 80px;
+  transition: background 0.2s;
+}
+.wordlycount-stat:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.wordlycount-stat-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+.wordlycount-stat-label {
+  font-size: 0.8rem;
+  color: #a3a3a3;
+  margin-top: 0.3rem;
+} 

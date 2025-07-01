@@ -1,0 +1,34 @@
+/* RentReceipt.css */
+
+.input.input-bordered {
+  @apply border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400;
+  color: #111;
+  background-color: #fff;
+}
+
+label {
+  color: #222;
+  font-weight: 500;
+}
+
+.receipt-preview {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .receipt-preview, .receipt-preview * {
+    visibility: visible;
+  }
+  .receipt-preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    box-shadow: none;
+    border: 2px solid #4ade80;
+  }
+} 
